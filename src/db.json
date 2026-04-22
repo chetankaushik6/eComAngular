@@ -1,0 +1,71 @@
+{
+  "seller": [
+    {
+      "name": "virat",
+      "email": "virat@gmail.com",
+      "password": "vir@123",
+      "id": "WCqtV0sbIr8"
+    },
+    {
+      "name": "check kr",
+      "email": "c@gmail.com",
+      "password": "123",
+      "id": "Iq2Xv-gyKxk"
+    },
+    {
+      "name": "naveen",
+      "email": "navc@gmail.com",
+      "password": "2314",
+      "id": "SCyxhOdoD2c"
+    },
+    {
+      "name": "ravi bishnoi",
+      "email": "ravi@gmail.com",
+      "password": "ravi123",
+      "id": "Xve4vjfPTN8"
+    },
+    {
+      "name": "asdfaf",
+      "email": "asfa@gadf",
+      "password": "345643",
+      "id": "tDqBaqhce0s"
+    },
+    {
+      "name": "asdfasf",
+      "email": "wertwet@gmail.com",
+      "password": "asdfasf",
+      "id": "5xOOAfzRl2c"
+    },
+    {
+      "name": "aaa",
+      "email": "abc@gmail.com",
+      "password": "123",
+      "id": "fNVEVmJtYFA"
+    },
+    {
+      "name": "trye6u6",
+      "email": "abc@gmail.com",
+      "password": "123",
+      "id": "ziZqOwtyHv0"
+    },
+    {
+      "name": "Chetan Kaushik",
+      "email": "abc@gmail.com",
+      "password": "123",
+      "id": "oVQ0Hm59FC8"
+    },
+    {
+      "name": "HELLO2",
+      "email": "abc@gmail.com",
+      "password": "123",
+      "id": "5rPkMGcXolA"
+    },
+    {
+      "name": "zxcv",
+      "email": "zxcv@gmail.com",
+      "password": "123",
+      "id": "_Fsa91_negs"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
