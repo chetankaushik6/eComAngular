@@ -13,6 +13,7 @@
     </div>
 
     <div class="Login" *ngIf="showLogin">
+        <p class="error-p">{{authError}}</p>
         <h1>Seller Login</h1>
         <form #sellerLogin="ngForm" (ngSubmit)="opLogin(sellerLogin.value)" class="common-form">
             <input class="form-input" type="email" placeholder="Enter email" ngModel name="email">

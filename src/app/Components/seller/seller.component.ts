@@ -11,13 +11,14 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [
     CommonModule,
-    FormsModule,
-    RouterLink
+    FormsModule
+    
 ],
   templateUrl: './seller.component.html',
   styleUrls: ['./seller.component.css']
 })
 export class SellerComponent {
+   authError:string="";
   constructor(private seller:SellerService,private router:Router){}
   ngOnInit(){
     this.seller.reloadSeller();
@@ -44,6 +45,12 @@ sellerData:any=[];
     }
   opLogin(sellerData: SignupData):void {
         this.seller.userLogin(sellerData)
+        this.seller.isLoginError.subscribe((isError:boolean)=>{
+            if(isError){
+              //  alert('Login failed. please check your credentials and try again.');
+                 this.authError="Invalid email or password";
+            }
+        })
        console.log('seller login data submitted:',sellerData);
     }
 
