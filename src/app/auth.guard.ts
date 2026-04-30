@@ -11,7 +11,7 @@ export const authGuard: CanActivateFn = (route, state) => {
       if(localStorage.getItem('seller')){
       return true;
     }
-    return true;
+    return false;
   }
   
   return router.createUrlTree(['/seller-login']);
