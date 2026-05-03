@@ -36,7 +36,6 @@
       "password": "asdfasf",
       "id": "5xOOAfzRl2c"
     },
-   
     {
       "name": "trye6u6",
       "email": "abc@gmail.com",
@@ -60,6 +59,68 @@
       "email": "zxcv@gmail.com",
       "password": "123",
       "id": "_Fsa91_negs"
+    },
+    {
+      "name": "lukki mota",
+      "email": "lakki@gmail.com",
+      "password": "123",
+      "id": "uUai-gLqCIo"
+    }
+  ],
+  "products": [
+    {
+      "name": "Nike Shoes",
+      "price": 4999,
+      "color": "Blue",
+      "category": "shoes",
+      "description": "Comfortable running shoes",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
+      "id": "p5"
+    },
+    {
+      "name": "HP Pavilion Laptop",
+      "price": 62999,
+      "color": "Black",
+      "category": "laptop",
+      "description": "Gaming laptop with fast processor",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400",
+      "id": "p6"
+    },
+    {
+      "name": "Boat Earbuds",
+      "price": 1499,
+      "color": "Red",
+      "category": "electronics",
+      "description": "Wireless earbuds with deep bass",
+      "image": "https://images.unsplash.com/photo-1518441902110-7a91c7e9c9c5?w=400",
+      "id": "p7"
+    },
+    {
+      "name": "OnePlus Nord",
+      "price": 27999,
+      "color": "Blue",
+      "category": "mobile",
+      "description": "Smooth performance smartphone",
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400",
+      "id": "p8"
+    },
+    {
+      "name": "Fossil Watch",
+      "price": 8999,
+      "color": "Brown",
+      "category": "watch",
+      "description": "Premium leather watch",
+      "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=400",
+      "id": "p9"
+    },
+    {
+      "name": "Adidas Sneakers",
+      "price": 5999,
+      "color": "White",
+      "category": "shoes",
+      "description": "Stylish casual sneakers",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
+      "id": "p10"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

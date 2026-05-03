@@ -1,1 +1,44 @@
-<p>seller-add-product works!</p>
+<div class="add-product">
+    <h1>Add New Product</h1>
+
+    <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)">
+         <!-- <div class="success-message" *ngIf="AddProductMsg">
+            {{ AddProductMsg }}
+         </div> -->
+         <p class="success-p">{{AddProductMsg}}</p>
+        <div class="form-group">
+            <label>Product Name</label>
+            <input type="text" name="name" ngModel required>
+        </div>
+
+        <div class="form-group">
+            <label>Product Price</label>
+            <input type="number" name="price" ngModel required>
+        </div>
+
+        <div class="form-group">
+            <label>Color</label>
+            <input type="text" name="color" ngModel required>
+        </div>
+
+        <div class="form-group">
+            <label>Category</label>
+            <input type="text" name="category" ngModel required>
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <textarea name="description" rows="4" ngModel required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Product Image URL</label>
+            <input type="text" name="image" ngModel required>
+        </div>
+
+        <!-- <button type="submit" class="btn">Add Product</button> -->
+        <button type="submit" [disabled]="addProduct.invalid" class="btn">
+            Add Product
+        </button>
+    </form>
+</div>
