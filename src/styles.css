@@ -7,3 +7,15 @@ margin: 0px;
 .error-p{
     color: red;
 }
+
+.success-p{
+    color: green;
+        text-align: center;
+    font-size: 20px
+}
+
+.delete_msg{
+    color: red;
+    text-align: center;
+    font-size: 20px;
+}
