@@ -2,16 +2,24 @@ import { Component } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { ProductData } from '../../data-type';
 import { CommonModule } from '@angular/common';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faCoffee,faDeleteLeft,faTrash, faPenSquare,faEdit,faUsersViewfinder } from '@fortawesome/free-solid-svg-icons';
+import { RouterLink } from "@angular/router";
 @Component({
   selector: 'app-seller-home',
-  imports: [CommonModule],
+  imports: [CommonModule, FontAwesomeModule, RouterLink],
   templateUrl: './seller-home.component.html',
   styleUrl: './seller-home.component.css'
 })
 export class SellerHomeComponent {
   productList:undefined| ProductData[];
   deleteMessage:undefined|string;
+  faCoffee = faCoffee;
+  faDeleteLeft = faDeleteLeft;
+  faTrash = faTrash;
+  faPenSquare = faPenSquare;
+  faEdit = faEdit;
+  faUsersViewfinder = faUsersViewfinder;
   constructor(private productService:ProductsService){}
    ngOnInit(){
        this.list();

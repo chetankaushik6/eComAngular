@@ -88,6 +88,14 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+.update-btn {
+  padding: 8px 14px;
+  /* background: #ff4d4d; */
+  border: none;
+  /* color: white; */
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 .delete-btn:hover {
   background: #cc0000;

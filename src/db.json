@@ -69,15 +69,6 @@
   ],
   "products": [
     {
-      "name": "Nike Shoes",
-      "price": 4999,
-      "color": "Blue",
-      "category": "shoes",
-      "description": "Comfortable running shoes",
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
-      "id": "p5"
-    },
-    {
       "name": "HP Pavilion Laptop",
       "price": 62999,
       "color": "Black",
@@ -97,8 +88,8 @@
     },
     {
       "name": "OnePlus Nord",
-      "price": 27999,
-      "color": "Blue",
+      "price": 34567,
+      "color": "white",
       "category": "mobile",
       "description": "Smooth performance smartphone",
       "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400",
@@ -106,8 +97,8 @@
     },
     {
       "name": "Fossil Watch",
-      "price": 8999,
-      "color": "Brown",
+      "price": 1109,
+      "color": "Blue",
       "category": "watch",
       "description": "Premium leather watch",
       "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=400",
