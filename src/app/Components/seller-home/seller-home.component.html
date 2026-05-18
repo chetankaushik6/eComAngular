@@ -24,9 +24,14 @@
 
     <!-- ACTIONS -->
     <div class="actions">
-      <button class="view-btn">View</button>
+      <button class="view-btn">
+        <fa-icon [icon]="faUsersViewfinder"></fa-icon>
+      </button>
+      <a routerLink="/seller-update-product/{{product.id}}" class="update-btn"> 
+        <fa-icon [icon]="faEdit"></fa-icon> 
+      </a>
       <button class="delete-btn" (click)="deleteProduct(product.id)">
-        Delete
+        <fa-icon [icon]="faTrash"></fa-icon> 
       </button>
     </div>
 
