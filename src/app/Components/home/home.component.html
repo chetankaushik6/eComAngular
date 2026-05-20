@@ -1,1 +1,67 @@
-<p>home works!</p>
+<div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+
+    <button
+      *ngFor="let item of popularProducts; let i = index"
+      type="button"
+      data-bs-target="#carouselExample"
+      [attr.data-bs-slide-to]="i"
+      [class.active]="i === 0">
+    </button>
+
+  </div>
+
+  <!-- Carousel Items -->
+  <div class="carousel-inner">
+
+    <div
+      class="carousel-item"
+      *ngFor="let item of popularProducts; let i = index"
+      [class.active]="i === 0">
+
+      <!-- Product Image -->
+      <img
+        [src]="item.image"
+        class="d-block w-100 slider-image"
+        alt="product">
+
+      <!-- Product Details -->
+      <div class="carousel-caption d-none d-md-block">
+
+        <h2>{{ item.name }}</h2>
+
+        <p>{{ item.description }}</p>
+
+        <button class="btn btn-warning px-4">
+          Shop Now
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Prev -->
+  <button class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="prev">
+
+    <span class="carousel-control-prev-icon"></span>
+
+  </button>
+
+  <!-- Next -->
+  <button class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="next">
+
+    <span class="carousel-control-next-icon"></span>
+
+  </button>
+
+</div>

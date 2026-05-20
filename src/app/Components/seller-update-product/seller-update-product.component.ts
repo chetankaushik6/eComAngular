@@ -41,7 +41,7 @@ export class SellerUpdateProductComponent {
 
       setTimeout(() => {
         this.productMsg = undefined;
-        // this.router.navigate(['/seller-home']);
+        this.router.navigate(['/sellerHome']);
       }, 3000);
     })
   }

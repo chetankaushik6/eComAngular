@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs';
 import { ProductData } from '../data-type';
 
 @Injectable({
@@ -30,5 +31,9 @@ export class ProductsService {
   }
   updateProduct(product:ProductData){
       return this.http.put(`http://localhost:3000/products/${product.id}`, product);
+  }
+  popularProducts(){
+      return this.http.get<ProductData[]>('http://localhost:3000/products')
+        .pipe(map(products => products.slice(0, 3)));
   }
 }

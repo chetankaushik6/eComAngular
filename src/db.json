@@ -70,7 +70,7 @@
   "products": [
     {
       "name": "HP Pavilion Laptop",
-      "price": 62999,
+      "price": 1999,
       "color": "Black",
       "category": "laptop",
       "description": "Gaming laptop with fast processor",
@@ -79,11 +79,11 @@
     },
     {
       "name": "Boat Earbuds",
-      "price": 1499,
+      "price": "1599",
       "color": "Red",
       "category": "electronics",
       "description": "Wireless earbuds with deep bass",
-      "image": "https://images.unsplash.com/photo-1518441902110-7a91c7e9c9c5?w=400",
+      "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
       "id": "p7"
     },
     {
