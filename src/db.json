@@ -75,25 +75,25 @@
       "category": "laptop",
       "description": "Gaming laptop with fast processor",
       "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400",
-      "id": "p6"
+      "id": "p1"
     },
     {
       "name": "Boat Earbuds",
-      "price": "1599",
+      "price": 1599,
       "color": "Red",
       "category": "electronics",
       "description": "Wireless earbuds with deep bass",
       "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
-      "id": "p7"
+      "id": "p2"
     },
     {
       "name": "OnePlus Nord",
       "price": 34567,
-      "color": "white",
+      "color": "White",
       "category": "mobile",
       "description": "Smooth performance smartphone",
       "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400",
-      "id": "p8"
+      "id": "p3"
     },
     {
       "name": "Fossil Watch",
@@ -102,7 +102,7 @@
       "category": "watch",
       "description": "Premium leather watch",
       "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=400",
-      "id": "p9"
+      "id": "p4"
     },
     {
       "name": "Adidas Sneakers",
@@ -111,7 +111,214 @@
       "category": "shoes",
       "description": "Stylish casual sneakers",
       "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
+      "id": "p5"
+    },
+    {
+      "name": "Samsung Galaxy S24",
+      "price": 74999,
+      "color": "Black",
+      "category": "mobile",
+      "description": "Flagship Android smartphone",
+      "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
+      "id": "p6"
+    },
+    {
+      "name": "Sony Headphones",
+      "price": 8999,
+      "color": "Silver",
+      "category": "electronics",
+      "description": "Noise cancelling headphones",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
+      "id": "p7"
+    },
+    {
+      "name": "Apple iPad",
+      "price": 42999,
+      "color": "Grey",
+      "category": "tablet",
+      "description": "Powerful tablet for work and play",
+      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400",
+      "id": "p8"
+    },
+    {
+      "name": "Nike Air Max",
+      "price": 7999,
+      "color": "Black",
+      "category": "shoes",
+      "description": "Comfortable running shoes",
+      "image": "https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=400",
+      "id": "p9"
+    },
+    {
+      "name": "Dell Inspiron",
+      "price": 55999,
+      "color": "Grey",
+      "category": "laptop",
+      "description": "Slim and lightweight laptop",
+      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400",
       "id": "p10"
+    },
+    {
+      "name": "Canon DSLR Camera",
+      "price": 65999,
+      "color": "Black",
+      "category": "camera",
+      "description": "Professional photography camera",
+      "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400",
+      "id": "p11"
+    },
+    {
+      "name": "Mi Smart TV",
+      "price": 32999,
+      "color": "Black",
+      "category": "tv",
+      "description": "4K Ultra HD Smart TV",
+      "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400",
+      "id": "p12"
+    },
+    {
+      "name": "Puma Hoodie",
+      "price": 2499,
+      "color": "Grey",
+      "category": "fashion",
+      "description": "Warm and stylish hoodie",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400",
+      "id": "p13"
+    },
+    {
+      "name": "Apple Watch",
+      "price": 28999,
+      "color": "White",
+      "category": "watch",
+      "description": "Fitness tracking smartwatch",
+      "image": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=400",
+      "id": "p14"
+    },
+    {
+      "name": "Asus Gaming Mouse",
+      "price": 1499,
+      "color": "Black",
+      "category": "accessories",
+      "description": "RGB gaming mouse",
+      "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=400",
+      "id": "p15"
+    },
+    {
+      "name": "JBL Bluetooth Speaker",
+      "price": 3499,
+      "color": "Blue",
+      "category": "electronics",
+      "description": "Portable waterproof speaker",
+      "image": "https://images.unsplash.com/photo-1589003077984-894e133dabab?w=400",
+      "id": "p16"
+    },
+    {
+      "name": "Lenovo ThinkPad",
+      "price": 68999,
+      "color": "Black",
+      "category": "laptop",
+      "description": "Business class performance laptop",
+      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400",
+      "id": "p17"
+    },
+    {
+      "name": "RayBan Sunglasses",
+      "price": 4999,
+      "color": "Brown",
+      "category": "fashion",
+      "description": "Classic stylish sunglasses",
+      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400",
+      "id": "p18"
+    },
+    {
+      "name": "Samsung Refrigerator",
+      "price": 45999,
+      "color": "Silver",
+      "category": "appliances",
+      "description": "Double door smart refrigerator",
+      "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=400",
+      "id": "p19"
+    },
+    {
+      "name": "LG Washing Machine",
+      "price": 38999,
+      "color": "White",
+      "category": "appliances",
+      "description": "Fully automatic washing machine",
+      "image": "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=400",
+      "id": "p20"
+    },
+    {
+      "name": "Realme Narzo",
+      "price": 18999,
+      "color": "Blue",
+      "category": "mobile",
+      "description": "Budget gaming smartphone",
+      "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400",
+      "id": "p21"
+    },
+    {
+      "name": "HP Wireless Keyboard",
+      "price": 1299,
+      "color": "Black",
+      "category": "accessories",
+      "description": "Slim wireless keyboard",
+      "image": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=400",
+      "id": "p22"
+    },
+    {
+      "name": "Noise Smartwatch",
+      "price": 2499,
+      "color": "Black",
+      "category": "watch",
+      "description": "Fitness smartwatch with heart tracking",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400",
+      "id": "p23"
+    },
+    {
+      "name": "MacBook Air",
+      "price": 94999,
+      "color": "Silver",
+      "category": "laptop",
+      "description": "Apple lightweight performance laptop",
+      "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400",
+      "id": "p24"
+    },
+    {
+      "name": "Canon Printer",
+      "price": 7999,
+      "color": "White",
+      "category": "printer",
+      "description": "All in one wireless printer",
+      "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400",
+      "id": "p25"
+    },
+    {
+      "name": "Zebronics Monitor",
+      "price": 12499,
+      "color": "Black",
+      "category": "monitor",
+      "description": "24 inch full HD monitor",
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400",
+      "id": "p26"
+    },
+    {
+      "name": "Nike Sports T-Shirt",
+      "price": 1799,
+      "color": "Green",
+      "category": "fashion",
+      "description": "Comfortable sports wear",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400",
+      "id": "p27"
+    },
+    {
+      "name": "Apple AirPods",
+      "price": 21999,
+      "color": "White",
+      "category": "electronics",
+      "description": "Premium wireless earbuds",
+      "image": "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=400",
+      "id": "p28"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

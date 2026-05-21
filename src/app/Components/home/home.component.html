@@ -65,3 +65,51 @@
   </button>
 
 </div>
+
+<div class="product-list-wrapper">
+
+    <h1 class="title">Trendy Products</h1>
+
+    <div class="row">
+
+        <div class="col-sm-3" *ngFor="let item of trendyProducts">
+
+            <div class="product-card">
+
+                <div class="product-item">
+                    <img [src]="item.image" [alt]="item.name">
+                </div>
+
+                <div class="product-detail">
+
+                    <h6 class="name-head">
+                        {{item.name}}
+                    </h6>
+
+                    <div class="product-price">
+                        <h6>Price: ${{item.price}}</h6>
+                    </div>
+
+                    <div class="product-color">
+                        <h6>Color: {{item.color}}</h6>
+                    </div>
+
+                </div>
+
+                <div class="product-footer">
+                    <a href="#" class="btn btn-warning">
+                        View Details
+                    </a>
+
+                    <a href="#" class="btn btn-warning">
+                        Add to Cart
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

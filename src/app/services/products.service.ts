@@ -36,4 +36,15 @@ export class ProductsService {
       return this.http.get<ProductData[]>('http://localhost:3000/products')
         .pipe(map(products => products.slice(0, 3)));
   }
+
+  trendyProducts(){
+     return this.http.get<ProductData[]>('http://localhost:3000/products')
+        .pipe(map(products => products.slice(0, 10)));
+  }
+
+  searchProducts(query: string) {
+  return this.http.get<ProductData[]>(
+    `http://localhost:3000/products?q=${query}`
+  );
+}
 }

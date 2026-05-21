@@ -2,7 +2,8 @@
   <h1 class="logo"><a routerLink="/">E-comm</a></h1>
 
   <div class="search-container" *ngIf="menuType==='default'">
-    <input type="text" placeholder="Search for products" />
+    <input type="text" placeholder="Search for products" #searchBox
+(keyup)="searchProduct(searchBox.value)" />
     <button>🔍</button>
   </div>
 
