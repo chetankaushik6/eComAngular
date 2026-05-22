@@ -42,9 +42,30 @@ export class ProductsService {
         .pipe(map(products => products.slice(0, 10)));
   }
 
-  searchProducts(query: string) {
-  return this.http.get<ProductData[]>(
-    `http://localhost:3000/products?q=${query}`
-  );
+  searchProducts(query: string = '') {
+  return this.http
+    .get<ProductData[]>('http://localhost:3000/products')
+    .pipe(
+      map((products) => {
+        
+        // top 10 trending products
+        let trendy = products.slice(0, 10);
+
+        // agar search keyword hai to filter karo
+        if (query.trim()) {
+          trendy = trendy.filter((item) =>
+            item.name.toLowerCase().includes(query.toLowerCase())
+          );
+        }
+
+        return trendy;
+      })
+    );
 }
+
+//   searchProducts(query: string) {
+//   return this.http.get<ProductData[]>(
+//     `http://localhost:3000/products?q=${query}`
+//   );
+// }
 }

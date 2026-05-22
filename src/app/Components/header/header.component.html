@@ -1,12 +1,38 @@
 <nav class="nav">
   <h1 class="logo"><a routerLink="/">E-comm</a></h1>
 
-  <div class="search-container" *ngIf="menuType==='default'">
+  <!-- <div class="search-container" *ngIf="menuType==='default'">
     <input type="text" placeholder="Search for products" #searchBox
-(keyup)="searchProduct(searchBox.value)" />
-    <button>🔍</button>
-  </div>
+(keyup)="searchProduct($event)" (blur)="searchResult = undefined" />
+    <button (click)="submitSearch(searchBox.value)">
+      
+    Search</button>
+    <ul class="suggestedResult">
+      <li *ngFor="let product of searchResult">
+        <a>{{ product.name }}</a>
+      </li>
+    </ul>
+  </div> -->
+<div class="search-container" *ngIf="menuType==='default'">
+  
+  <input
+    type="text"
+    placeholder="Search for products"
+    #searchBox
+    (keyup)="searchProduct($event)"
+  />
 
+  <button (click)="submitSearch(searchBox.value)">🔍</button>
+
+  <ul class="suggestedResult" *ngIf="searchResult?.length">
+
+    <li *ngFor="let product of searchResult">
+      <a>{{ product.name }}</a>
+    </li>
+
+  </ul>
+
+</div>
   <div class="myMenus" [ngSwitch]="menuType">
     <ul *ngSwitchCase="'default'">
       <li><a routerLink="/">Home</a></li>
