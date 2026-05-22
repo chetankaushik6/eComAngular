@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { ProductsService } from '../../services/products.service';
+import { ProductData } from '../../data-type';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -14,7 +15,7 @@ import { ProductsService } from '../../services/products.service';
 export class HeaderComponent {
   menuType: string = 'default';
   sellerName: string = '';
- 
+  searchResult: undefined | ProductData[];
   constructor(private router: Router, private product: ProductsService) { }
 
   ngOnInit(): void {
@@ -40,15 +41,33 @@ export class HeaderComponent {
 
   }
 
-      searchProduct(query: string) {
-   this.product.searchProducts(query).subscribe((res) => {
-      // this.trendyProducts = res;
-   });
-}
+  searchProduct(query: KeyboardEvent) {
+    if (query) {
+      const element = (query.target as HTMLInputElement).value;
+      if (!element) {
+        this.searchResult = [];
+        return;
+      }
+      console.log(element);
+      this.product.searchProducts(element).subscribe((result) => {
+        console.warn("search result", result);
+        if(result.length >5){
+            result.length =5;
+        }
+        this.searchResult = result;
+      })
+    }
+
+  }
 
   logout() {
     localStorage.removeItem('seller');
     alert("User logout successfully!")
     this.router.navigate(['/']);
+  }
+
+  submitSearch(value:string){
+      console.warn("submit search",value);
+      this.router.navigate(['/search',value]);
   }
 }
