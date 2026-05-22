@@ -13,6 +13,7 @@ import { ProductData } from '../../data-type';
 export class HomeComponent {
 
   popularProducts: undefined|ProductData[];
+  trendyProducts: undefined|ProductData[];
 
   constructor(private product: ProductsService){}
 
@@ -21,6 +22,12 @@ export class HomeComponent {
          this.popularProducts = result;
          console.log("popular products", result);
      });
+
+     this.product.trendyProducts().subscribe((res)=>{
+           this.trendyProducts = res;
+           console.log("trendy products", res);
+     })
+     
   }
 
 //  carouselImages = [
