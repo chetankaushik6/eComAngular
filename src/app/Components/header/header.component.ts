@@ -62,12 +62,12 @@ export class HeaderComponent {
 
   logout() {
     localStorage.removeItem('seller');
-    alert("User logout successfully!")
+    // alert("User logout successfully!")
     this.router.navigate(['/']);
   }
 
   submitSearch(value:string){
-      console.warn("submit search",value);
-      this.router.navigate(['/search',value]);
+      // console.warn("submit search",value);
+      this.router.navigate(['/search', value]);
   }
 }

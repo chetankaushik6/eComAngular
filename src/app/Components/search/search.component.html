@@ -1,1 +1,76 @@
-<p>search works!</p>
+<!-- search.component.html -->
+
+<div class="search-container">
+  
+  <!-- Search Header -->
+  <div class="search-header-wrapper">
+    <div class="header-content">
+      <h1>Search Results</h1>
+      <p class="result-count">
+        <span class="query-highlight">"{{ searchQuery }}"</span>
+        <span class="product-count" *ngIf="products.length > 0">
+          — Found {{ products.length }} product<span *ngIf="products.length !== 1">s</span>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="products-wrapper" *ngIf="products.length > 0">
+    <div class="product-grid">
+      
+      <div class="product-card" *ngFor="let product of products">
+        
+        <!-- Product Image -->
+        <div class="product-image-wrapper">
+          <div class="product-image">
+            <img [src]="product.image" [alt]="product.name" class="product-img" />
+          </div>
+          <div class="product-badge">{{ product.category }}</div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+          <h3 class="product-name">{{ product.name }}</h3>
+          
+          <p class="product-description" [title]="product.description">
+            {{ product.description | slice:0:50 }}{{ product.description.length > 50 ? '...' : '' }}
+          </p>
+
+          <div class="product-specs">
+            <span class="color-tag">{{ product.color }}</span>
+          </div>
+
+          <!-- Price Section -->
+          <div class="price-section">
+            <span class="price">₹ {{ product.price }}</span>
+            <span class="original-price">₹ {{ (product.price * 1.2) | number:'1.0-0' }}</span>
+            <span class="discount">20% off</span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="action-buttons">
+            <button class="btn btn-primary">
+              👁️ View Details
+            </button>
+            <button class="btn btn-secondary">
+              🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- No Results Message -->
+  <div class="empty-state" *ngIf="products.length === 0">
+    <div class="empty-icon">🔍</div>
+    <h2>No Products Found</h2>
+    <p>Sorry! We couldn't find any products matching <strong>"{{ searchQuery }}"</strong></p>
+    <p class="empty-suggestion">Try searching with different keywords or browse our categories.</p>
+    <button class="btn btn-explore">Browse All Products</button>
+  </div>
+
+</div>
