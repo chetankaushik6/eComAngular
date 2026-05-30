@@ -65,13 +65,25 @@
       "email": "lakki@gmail.com",
       "password": "123",
       "id": "uUai-gLqCIo"
+    },
+    {
+      "name": "MANISH SHARMA",
+      "email": "MANISH@gmail.com",
+      "password": "999",
+      "id": "U2SawcBoElA"
+    },
+    {
+      "name": "rajsharma",
+      "email": "raj@gmail.com",
+      "password": "12345",
+      "id": "zFP4_r7qh6k"
     }
   ],
   "products": [
     {
       "name": "HP Pavilion Laptop",
-      "price": 2000,
-      "color": "Black",
+      "price": 497,
+      "color": "blue",
       "category": "laptop",
       "description": "Gaming laptop with fast processor",
       "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400",
@@ -79,7 +91,7 @@
     },
     {
       "name": "Boat Earbuds",
-      "price": 1599,
+      "price": 2598,
       "color": "Red",
       "category": "electronics",
       "description": "Wireless earbuds with deep bass",
@@ -231,15 +243,6 @@
       "id": "p18"
     },
     {
-      "name": "Samsung Refrigerator",
-      "price": 45999,
-      "color": "Silver",
-      "category": "appliances",
-      "description": "Double door smart refrigerator",
-      "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=400",
-      "id": "p19"
-    },
-    {
       "name": "LG Washing Machine",
       "price": 38999,
       "color": "White",
@@ -310,15 +313,6 @@
       "description": "Comfortable sports wear",
       "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400",
       "id": "p27"
-    },
-    {
-      "name": "Apple AirPods",
-      "price": 21999,
-      "color": "White",
-      "category": "electronics",
-      "description": "Premium wireless earbuds",
-      "image": "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=400",
-      "id": "p28"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

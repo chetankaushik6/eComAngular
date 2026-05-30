@@ -1,0 +1,93 @@
+<!-- <div *ngIf="product; else loading">
+  <div class="product-detail-card">
+    <img [src]="product.image" [alt]="product.name" class="product-image" />
+    <div class="product-info">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <p><strong>Price:</strong> ${{ product.price }}</p>
+      <p><strong>Color:</strong> {{ product.color }}</p>
+      <p><strong>Category:</strong> {{ product.category }}</p>
+      <a href="/" class="btn btn-warning">Back to Home</a>
+    </div>
+  </div>
+</div>
+<ng-template #loading>
+  <p>Loading product details...</p>
+</ng-template> -->
+
+<div class="container py-5" *ngIf="product">
+
+  <div class="row shadow-lg rounded-4 overflow-hidden bg-white">
+
+    <!-- Product Image -->
+    <div class="col-md-6 p-4 bg-light text-center">
+      <img [src]="product.image" [alt]="product.name" class="img-fluid product-image" />
+    </div>
+
+    <!-- Product Info -->
+    <div class="col-md-6 p-5">
+
+      <span class="badge bg-dark mb-3 text-uppercase px-3 py-2">
+        {{ product.category }}
+      </span>
+
+      <h1 class="fw-bold mb-3">
+        {{ product.name }}
+      </h1>
+
+      <h2 class="text-success fw-bold mb-4">
+        ₹{{ product.price }}
+      </h2>
+
+      <p class="text-muted fs-5">
+        {{ product.description }}
+      </p>
+
+      <div class="mb-4">
+        <strong>Color :</strong>
+
+        <span class="ms-2 badge bg-secondary px-3 py-2">
+          {{ product.color }}
+        </span>
+      </div>
+
+      <!-- Buttons -->
+      <div class="d-flex gap-3">
+
+        <button class="btn btn-dark btn-lg px-4">
+          Add To Cart
+        </button>
+
+        <button class="btn btn-outline-dark btn-lg px-4">
+          Buy Now
+        </button>
+
+      </div>
+
+      <!-- Quantity Selector -->
+      <div class="d-flex align-items-center quantity-wrapper">
+        <div class="d-flex align-items-center mb-4">
+
+          <strong class="me-3 fs-5">Quantity</strong>
+
+          <div class="quantity-box">
+
+            <button class="qty-btn" (click)="decreaseQty()">
+              -
+            </button>
+
+            <span class="qty-value">
+              {{ quantity }}
+            </span>
+
+            <button class="qty-btn" (click)="increaseQty()">
+              +
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

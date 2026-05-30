@@ -1,5 +1,7 @@
 <nav class="nav">
-  <h1 class="logo"><a routerLink="/">E-comm</a></h1>
+  <h1 class="logo"><a routerLink="/">
+    E-comm
+  </a></h1>
 
   <!-- <div class="search-container" *ngIf="menuType==='default'">
     <input type="text" placeholder="Search for products" #searchBox
@@ -27,7 +29,7 @@
   <ul class="suggestedResult" *ngIf="searchResult?.length">
 
     <li *ngFor="let product of searchResult">
-      <a>{{ product.name }}</a>
+        <a [routerLink]="['/detail', product.id]">{{ product.name }}</a>
     </li>
 
   </ul>
@@ -37,7 +39,8 @@
     <ul *ngSwitchCase="'default'">
       <li><a routerLink="/">Home</a></li>
       <li><a routerLink="/seller">Seller</a></li>
-      <li><a routerLink="/login">Login</a></li>
+      <!-- /login -->
+      <li><a routerLink="/userAuth">Login/Sign-Up</a></li>
       <li><a routerLink="/cart">Cart(0)</a></li>
     </ul>
 
