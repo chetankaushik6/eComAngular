@@ -68,6 +68,7 @@ export class HeaderComponent {
 
   submitSearch(value:string){
       // console.warn("submit search",value);
+      //  this.searchResult = [];
       this.router.navigate(['/search', value]);
   }
 }

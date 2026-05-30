@@ -3,12 +3,8 @@
   <!-- Indicators -->
   <div class="carousel-indicators">
 
-    <button
-      *ngFor="let item of popularProducts; let i = index"
-      type="button"
-      data-bs-target="#carouselExample"
-      [attr.data-bs-slide-to]="i"
-      [class.active]="i === 0">
+    <button *ngFor="let item of popularProducts; let i = index" type="button" data-bs-target="#carouselExample"
+      [attr.data-bs-slide-to]="i" [class.active]="i === 0">
     </button>
 
   </div>
@@ -16,17 +12,13 @@
   <!-- Carousel Items -->
   <div class="carousel-inner">
 
-    <div
-      class="carousel-item"
-      *ngFor="let item of popularProducts; let i = index"
-      [class.active]="i === 0">
+    <div class="carousel-item" *ngFor="let item of popularProducts; let i = index" [class.active]="i === 0">
 
       <!-- Product Image -->
-      <img
-        [src]="item.image"
-        class="d-block w-100 slider-image"
-        alt="product">
-
+     
+         <a [routerLink]="['/detail', item.id]">
+        <img [src]="item.image" class="d-block w-100 slider-image" alt="product">
+      </a>
       <!-- Product Details -->
       <div class="carousel-caption d-none d-md-block">
 
@@ -45,20 +37,14 @@
   </div>
 
   <!-- Prev -->
-  <button class="carousel-control-prev"
-    type="button"
-    data-bs-target="#carouselExample"
-    data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
 
     <span class="carousel-control-prev-icon"></span>
 
   </button>
 
   <!-- Next -->
-  <button class="carousel-control-next"
-    type="button"
-    data-bs-target="#carouselExample"
-    data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
 
     <span class="carousel-control-next-icon"></span>
 
@@ -68,48 +54,48 @@
 
 <div class="product-list-wrapper">
 
-    <h1 class="title">Trendy Products</h1>
+  <h1 class="title">Trendy Products</h1>
 
-    <div class="row">
+  <div class="row">
 
-        <div class="col-sm-3" *ngFor="let item of trendyProducts">
+    <div class="col-sm-3" *ngFor="let item of trendyProducts">
 
-            <div class="product-card">
+      <div class="product-card">
 
-                <div class="product-item">
-                    <img [src]="item.image" [alt]="item.name">
-                </div>
+        <div class="product-item">
+          <img [src]="item.image" [alt]="item.name">
+        </div>
 
-                <div class="product-detail">
+        <div class="product-detail">
 
-                    <h6 class="name-head">
-                        {{item.name}}
-                    </h6>
+          <h6 class="name-head">
+            {{item.name}}
+          </h6>
 
-                    <div class="product-price">
-                        <h6>Price: ${{item.price}}</h6>
-                    </div>
+          <div class="product-price">
+            <h6>Price: ${{item.price}}</h6>
+          </div>
 
-                    <div class="product-color">
-                        <h6>Color: {{item.color}}</h6>
-                    </div>
-
-                </div>
-
-                <div class="product-footer">
-                    <a href="#" class="btn btn-warning">
-                        View Details
-                    </a>
-
-                    <a href="#" class="btn btn-warning">
-                        Add to Cart
-                    </a>
-                </div>
-
-            </div>
+          <div class="product-color">
+            <h6>Color: {{item.color}}</h6>
+          </div>
 
         </div>
 
+        <div class="product-footer">
+          <a [routerLink]="['/detail', item.id]" class="btn btn-warning">
+            View Details
+          </a>
+
+          <a href="#" class="btn btn-warning">
+            Add to Cart
+          </a>
+        </div>
+
+      </div>
+
     </div>
+
+  </div>
 
 </div>

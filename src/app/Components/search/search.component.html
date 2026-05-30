@@ -24,7 +24,9 @@
         <!-- Product Image -->
         <div class="product-image-wrapper">
           <div class="product-image">
-            <img [src]="product.image" [alt]="product.name" class="product-img" />
+            <a routerLink="/detail/{{ product.id }}">
+              <img [src]="product.image" [alt]="product.name" class="product-img" />
+            </a>
           </div>
           <div class="product-badge">{{ product.category }}</div>
         </div>

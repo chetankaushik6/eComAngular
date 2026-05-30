@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProductsService } from '../../services/products.service';
 import { ProductData } from '../../data-type';
+
 @Component({
   selector: 'app-search',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
