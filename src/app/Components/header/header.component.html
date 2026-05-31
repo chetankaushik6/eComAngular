@@ -44,12 +44,23 @@
       <li><a routerLink="/cart">Cart(0)</a></li>
     </ul>
 
+    <ul *ngSwitchCase="'user'">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/seller">Seller</a></li>
+      <!-- /login -->
+        <li><a routerLink="/userAuth">{{userName | titlecase}}</a></li>
+      <li><a href="#" class="mnu" (click)="userLogout(); $event.preventDefault()">LogOut</a></li>
+      <li><a routerLink="/cart">Cart(0)</a></li>
+    </ul>
+
     <ul *ngSwitchCase="'seller'">
           <li><a routerLink="/seller-add-product">Add Product</a></li>
       <li><a routerLink="/sellerHome">Product List</a></li>
-      <li><a class="mnu" (click)="logout()">Logout</a></li>
+      <li><a href="#" class="mnu" (click)="logout(); $event.preventDefault()">Logout</a></li>
       <li><a routerLink="#">{{sellerName | titlecase}}</a></li>
     </ul>
+
+      
   </div>
 </nav>
 

@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { RouterLink, Router, NavigationEnd } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { ProductsService } from '../../services/products.service';
 import { ProductData } from '../../data-type';
+import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -12,33 +12,45 @@ import { ProductData } from '../../data-type';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sellerName: string = '';
+  userName: string = '';
   searchResult: undefined | ProductData[];
   constructor(private router: Router, private product: ProductsService) { }
 
   ngOnInit(): void {
-    this.router.events.subscribe((val: any) => {
-      console.log("router event", val.url);
-      if (val.url) {
-        if (localStorage.getItem('seller') && val.url.includes('seller')) {
-          console.warn('inside seller area', val.url);
-          this.menuType = 'seller';
-          if (localStorage.getItem('seller')) {
-            let sellerStore = localStorage.getItem('seller');
-            let sellerData = sellerStore && JSON.parse(sellerStore)[0];
-            this.sellerName = sellerData.name;
-          }
+    this.checkMenuType();
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      this.checkMenuType();
+    });
+  }
 
-        } else {
-          console.warn(' outside seller area', val.url);
-          this.menuType = 'default';
-        }
-      }
-    })
+  checkMenuType(): void {
+    const sellerStore = localStorage.getItem('seller');
+    const userStore = localStorage.getItem('user');
+    const currentUrl = this.router.url;
 
+    if (sellerStore && currentUrl.includes('seller')) {
+      console.warn('inside seller area');
+      const sellerData = JSON.parse(sellerStore);
+      this.sellerName = Array.isArray(sellerData) ? sellerData[0]?.name : sellerData?.name;
+      this.menuType = 'seller';
+      return;
+    }
 
+    if (userStore) {
+      console.warn('user logged in');
+      const userData = JSON.parse(userStore);
+      this.userName = Array.isArray(userData) ? userData[0]?.name : userData?.name;
+      this.menuType = 'user';
+      return;
+    }
+
+    console.warn('default menu');
+    this.menuType = 'default';
   }
 
   searchProduct(query: KeyboardEvent) {
@@ -62,7 +74,17 @@ export class HeaderComponent {
 
   logout() {
     localStorage.removeItem('seller');
-    // alert("User logout successfully!")
+    this.userName = '';
+    this.menuType = 'default';
+    this.checkMenuType();
+    this.router.navigate(['/']);
+  }
+
+  userLogout(){
+    localStorage.removeItem('user');
+    this.userName = '';
+    this.menuType = 'default';
+    this.checkMenuType();
     this.router.navigate(['/']);
   }
 

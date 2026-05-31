@@ -315,5 +315,55 @@
       "id": "p27"
     }
   ],
+  "users": [
+    {
+      "username": "chetan kaushik",
+      "email": "ckaushik@gmail.com",
+      "password": "123",
+      "id": "MW8RM9F5R4Q"
+    },
+    {
+      "username": "chetan kaushik",
+      "email": "ckaushik@gmail.com",
+      "password": "123",
+      "id": "rV5NI7S4Lfs"
+    },
+    {
+      "username": "chetan kaushik",
+      "email": "ckaushik@gmail.com",
+      "password": "123",
+      "id": "P-heyBiANW4"
+    },
+    {
+      "name": "chetan kaushik",
+      "email": "ckaushik@gmail.com",
+      "password": "123",
+      "id": "KdHjjYxIYpU"
+    },
+    {
+      "name": "Chetan Kaushik",
+      "email": "ckaushik@gmail.com",
+      "password": "123",
+      "id": "My55PuW5Ekk"
+    },
+    {
+      "name": "chetan kaushik",
+      "email": "ckaushik@gmail.com",
+      "password": "123",
+      "id": "1GNNFO-V7BA"
+    },
+    {
+      "name": "chetan kaushik",
+      "email": "ckaushik@gmail.com",
+      "password": "123",
+      "id": "gZrTcTGXh3w"
+    },
+    {
+      "name": "chetan kaushik",
+      "email": "ckaushik@gmail.com",
+      "password": "123",
+      "id": "W8bfumJ0Lqo"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
