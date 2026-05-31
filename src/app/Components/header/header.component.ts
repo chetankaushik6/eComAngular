@@ -44,7 +44,8 @@ export class HeaderComponent implements OnInit {
     if (userStore) {
       console.warn('user logged in');
       const userData = JSON.parse(userStore);
-      this.userName = Array.isArray(userData) ? userData[0]?.name : userData?.name;
+      const profile = Array.isArray(userData) ? userData[0] : userData;
+      this.userName = profile?.name || profile?.username || '';
       this.menuType = 'user';
       return;
     }

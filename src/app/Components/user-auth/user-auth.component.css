@@ -73,3 +73,10 @@
     cursor: not-allowed;
     transform: none;
 }
+
+.linkform {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+   cursor: pointer;
+}

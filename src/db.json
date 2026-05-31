@@ -363,6 +363,18 @@
       "email": "ckaushik@gmail.com",
       "password": "123",
       "id": "W8bfumJ0Lqo"
+    },
+    {
+      "name": "chetan kaushik",
+      "email": "ckaushik@gmail.com",
+      "password": "123",
+      "id": "SV90Rj8pHtQ"
+    },
+    {
+      "name": "chetan kaushik",
+      "email": "ckaushik@gmail.com",
+      "password": "123",
+      "id": "gonzscivNn4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
