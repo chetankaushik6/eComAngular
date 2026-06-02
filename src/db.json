@@ -323,58 +323,36 @@
       "id": "MW8RM9F5R4Q"
     },
     {
-      "username": "chetan kaushik",
-      "email": "ckaushik@gmail.com",
+      "name": "chetan",
+      "email": "abc@gmail.com",
       "password": "123",
-      "id": "rV5NI7S4Lfs"
+      "id": "a6TDko2d0Hw"
+    }
+  ],
+  "cart": [
+    {
+      "name": "Boat Earbuds",
+      "price": 2598,
+      "color": "Red",
+      "category": "electronics",
+      "description": "Wireless earbuds with deep bass",
+      "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
+      "quantity": 1,
+      "userId": "a6TDko2d0Hw",
+      "productId": "p2",
+      "id": "ufcoFJF1-wU"
     },
     {
-      "username": "chetan kaushik",
-      "email": "ckaushik@gmail.com",
-      "password": "123",
-      "id": "P-heyBiANW4"
-    },
-    {
-      "name": "chetan kaushik",
-      "email": "ckaushik@gmail.com",
-      "password": "123",
-      "id": "KdHjjYxIYpU"
-    },
-    {
-      "name": "Chetan Kaushik",
-      "email": "ckaushik@gmail.com",
-      "password": "123",
-      "id": "My55PuW5Ekk"
-    },
-    {
-      "name": "chetan kaushik",
-      "email": "ckaushik@gmail.com",
-      "password": "123",
-      "id": "1GNNFO-V7BA"
-    },
-    {
-      "name": "chetan kaushik",
-      "email": "ckaushik@gmail.com",
-      "password": "123",
-      "id": "gZrTcTGXh3w"
-    },
-    {
-      "name": "chetan kaushik",
-      "email": "ckaushik@gmail.com",
-      "password": "123",
-      "id": "W8bfumJ0Lqo"
-    },
-    {
-      "name": "chetan kaushik",
-      "email": "ckaushik@gmail.com",
-      "password": "123",
-      "id": "SV90Rj8pHtQ"
-    },
-    {
-      "name": "chetan kaushik",
-      "email": "ckaushik@gmail.com",
-      "password": "123",
-      "id": "gonzscivNn4"
+      "name": "Boat Earbuds",
+      "price": 2598,
+      "color": "Red",
+      "category": "electronics",
+      "description": "Wireless earbuds with deep bass",
+      "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
+      "quantity": 8,
+      "userId": "a6TDko2d0Hw",
+      "productId": "p2",
+      "id": "oGMxnp5T9ro"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

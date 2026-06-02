@@ -41,7 +41,7 @@
       <li><a routerLink="/seller">Seller</a></li>
       <!-- /login -->
       <li><a routerLink="/userAuth">Login/Sign-Up</a></li>
-      <li><a routerLink="/cart">Cart(0)</a></li>
+      <li><a routerLink="/cart">Cart({{cartItems}})</a></li>
     </ul>
 
     <ul *ngSwitchCase="'user'">
@@ -50,7 +50,7 @@
       <!-- /login -->
         <li><a routerLink="/userAuth">{{userName | titlecase}}</a></li>
       <li><a href="#" class="mnu" (click)="userLogout(); $event.preventDefault()">LogOut</a></li>
-      <li><a routerLink="/cart">Cart(0)</a></li>
+      <li><a routerLink="/cart">Cart({{cartItems}})</a></li>
     </ul>
 
     <ul *ngSwitchCase="'seller'">

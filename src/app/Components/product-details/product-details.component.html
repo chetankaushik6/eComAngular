@@ -54,8 +54,11 @@
       <!-- Buttons -->
       <div class="d-flex gap-3">
 
-        <button class="btn btn-dark btn-lg px-4">
+        <button class="btn btn-dark btn-lg px-4" *ngIf="!removeCart" (click)="addToCart()">
           Add To Cart
+        </button>
+             <button class="btn btn-danger btn-lg px-4" *ngIf="removeCart" (click)="removeFromCart()">
+          Remove From Cart
         </button>
 
         <button class="btn btn-outline-dark btn-lg px-4">
