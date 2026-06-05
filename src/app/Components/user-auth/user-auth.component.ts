@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { forkJoin } from 'rxjs';
-import { LoginData, ProductData, SignupData, cartData } from '../../data-type';
+import { LoginData, ProductData, SignupData, cartData, priceSummary } from '../../data-type';
 import { UsersService } from '../../services/users.service';
 import { ProductsService } from '../../services/products.service';
 @Component({
@@ -12,6 +12,14 @@ import { ProductsService } from '../../services/products.service';
   styleUrl: './user-auth.component.css'
 })
 export class UserAuthComponent {
+
+  priceSummary:priceSummary={
+        price:0,
+    discount:0,
+    tax:0,
+    deliveryCharges:0,
+    total:0,
+  }
   showLogin: boolean = false;
   authError: string = '';
   constructor(private userService: UsersService, private productService: ProductsService) { }
