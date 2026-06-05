@@ -327,6 +327,12 @@
       "email": "abc@gmail.com",
       "password": "123",
       "id": "a6TDko2d0Hw"
+    },
+    {
+      "name": "demo",
+      "email": "abcc@gmail.com",
+      "password": "123",
+      "id": "Y11IVQc2dFA"
     }
   ],
   "cart": [
@@ -353,6 +359,126 @@
       "userId": "a6TDko2d0Hw",
       "productId": "p2",
       "id": "oGMxnp5T9ro"
+    },
+    {
+      "name": "Apple iPad",
+      "price": 42999,
+      "color": "Grey",
+      "category": "tablet",
+      "description": "Powerful tablet for work and play",
+      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400",
+      "quantity": 5,
+      "userId": "a6TDko2d0Hw",
+      "productId": "p8",
+      "id": "kZDZBfJA0cc"
+    },
+    {
+      "name": "Samsung Galaxy S24",
+      "price": 74999,
+      "color": "Black",
+      "category": "mobile",
+      "description": "Flagship Android smartphone",
+      "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
+      "quantity": 1,
+      "userId": "a6TDko2d0Hw",
+      "productId": "p6",
+      "id": "TMj8eFA-NjY"
+    },
+    {
+      "name": "Samsung Galaxy S24",
+      "price": 74999,
+      "color": "Black",
+      "category": "mobile",
+      "description": "Flagship Android smartphone",
+      "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
+      "quantity": 5,
+      "userId": "a6TDko2d0Hw",
+      "productId": "p6",
+      "id": "Y1TGi7ZRk9o"
+    },
+    {
+      "name": "Samsung Galaxy S24",
+      "price": 74999,
+      "color": "Black",
+      "category": "mobile",
+      "description": "Flagship Android smartphone",
+      "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
+      "quantity": 5,
+      "userId": "a6TDko2d0Hw",
+      "productId": "p6",
+      "id": "2k7EDwiCmj4"
+    },
+    {
+      "name": "Samsung Galaxy S24",
+      "price": 74999,
+      "color": "Black",
+      "category": "mobile",
+      "description": "Flagship Android smartphone",
+      "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
+      "quantity": 14,
+      "userId": "Y11IVQc2dFA",
+      "productId": "p6",
+      "id": "2yTHuMqdB8I"
+    },
+    {
+      "name": "OnePlus Nord",
+      "price": 34567,
+      "color": "White",
+      "category": "mobile",
+      "description": "Smooth performance smartphone",
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400",
+      "quantity": 1,
+      "userId": "Y11IVQc2dFA",
+      "productId": "p3",
+      "id": "ah1kKTjBku0"
+    },
+    {
+      "name": "Sony Headphones",
+      "price": 8999,
+      "color": "Silver",
+      "category": "electronics",
+      "description": "Noise cancelling headphones",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
+      "quantity": 1,
+      "userId": "Y11IVQc2dFA",
+      "productId": "p7",
+      "id": "nWqdGIBdn6w"
+    },
+    {
+      "name": "Nike Air Max",
+      "price": 7999,
+      "color": "Black",
+      "category": "shoes",
+      "description": "Comfortable running shoes",
+      "image": "https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=400",
+      "quantity": 1,
+      "userId": "Y11IVQc2dFA",
+      "productId": "p9",
+      "id": "CQt3enU6NRA"
+    },
+    {
+      "name": "Dell Inspiron",
+      "price": 55999,
+      "color": "Grey",
+      "category": "laptop",
+      "description": "Slim and lightweight laptop",
+      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400",
+      "quantity": 1,
+      "userId": "a6TDko2d0Hw",
+      "productId": "p10",
+      "id": "rIP9OhCQBKM"
+    },
+    {
+      "name": "Apple iPad",
+      "price": 42999,
+      "color": "Grey",
+      "category": "tablet",
+      "description": "Powerful tablet for work and play",
+      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400",
+      "quantity": 3,
+      "userId": "a6TDko2d0Hw",
+      "productId": "p8",
+      "id": "y7d8TNZD6LQ"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

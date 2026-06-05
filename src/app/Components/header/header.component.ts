@@ -57,6 +57,7 @@ export class HeaderComponent implements OnInit {
       const profile = Array.isArray(userData) ? userData[0] : userData;
       this.userName = profile?.name || profile?.username || '';
       this.menuType = 'user';
+      this.product.getCartList(userData.id);
       return;
     }
 
@@ -96,7 +97,8 @@ export class HeaderComponent implements OnInit {
     this.userName = '';
     this.menuType = 'default';
     this.checkMenuType();
-    this.router.navigate(['/']);
+    this.router.navigate(['/userAuth']);
+    this.product.cartData.emit([]);
   }
 
   submitSearch(value:string){

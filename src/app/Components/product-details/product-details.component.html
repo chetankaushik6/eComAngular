@@ -57,7 +57,7 @@
         <button class="btn btn-dark btn-lg px-4" *ngIf="!removeCart" (click)="addToCart()">
           Add To Cart
         </button>
-             <button class="btn btn-danger btn-lg px-4" *ngIf="removeCart" (click)="removeFromCart()">
+        <button class="btn btn-danger btn-lg px-4" *ngIf="removeCart" (click)="removeFromCart(product.id)">
           Remove From Cart
         </button>
 
