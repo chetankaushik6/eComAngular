@@ -119,4 +119,17 @@ localRemoveFromCart(productId: string) {
 addToCart(cartDataResult: cartData) {
      return  this.http.post('http://localhost:3000/cart', cartDataResult);
  }
+
+ getCartList(userId: string) {
+     return this.http.get<ProductData[]>(`http://localhost:3000/cart?userId=${userId}`,{observe:'response'}).subscribe((res)=>{
+         if(res && res.body){
+              this.cartData.emit(res.body);
+         }
+     })
+    
+ }
+
+ removeFromCart(cartId: any) {
+      return this.http.delete(`http://localhost:3000/cart/${cartId}`);
+ }
 }
