@@ -1,0 +1,75 @@
+<!-- cart-page.component.html -->
+
+<div class="cart-page">
+
+  <!-- Heading -->
+  <div class="cart-header">
+    <h1>🛒 Cart Page</h1>
+    <p>Your selected products are ready for checkout</p>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="cart-container">
+
+    <!-- Left Side - Cart Details -->
+    <div class="cart-details">
+
+      <div class="cart-card" *ngFor="let item of cartData">
+
+        <!-- Product Image -->
+        <img [src]="item.image" [alt]="item.name" />
+
+        <!-- Product Info -->
+        <div class="cart-info">
+          <h3>{{ item.name }}</h3>
+
+          <p class="price">₹{{ item.price }}</p>
+
+          <!-- Quantity -->
+          <div class="quantity-box">
+            <button (click)="decreaseQty(item)">-</button>
+
+            <span>{{ item.quantity }}</span>
+
+            <button (click)="increaseQty(item)">+</button>
+          </div>
+        </div>
+
+        <!-- Remove Button -->
+        <button class="remove-btn" (click)="removeItem(item.id)">
+          Remove
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- Right Side - Cart Summary -->
+    <div class="cart-summary">
+
+      <h2>Order Summary</h2>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>₹{{ subtotal }}</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span>₹100</span>
+      </div>
+
+      <div class="summary-row total">
+        <span>Total</span>
+        <span>₹{{ subtotal + 100 }}</span>
+      </div>
+
+      <button class="checkout-btn">
+        Proceed to Checkout
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

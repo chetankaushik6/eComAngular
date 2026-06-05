@@ -33,3 +33,11 @@ export interface cartData{
     userId: string | number | undefined;
     productId: string | number | undefined;
 }
+
+export interface priceSummary{
+    price:number;
+    discount:number;
+    tax:number;
+    deliveryCharges:number;
+    total:number;
+}

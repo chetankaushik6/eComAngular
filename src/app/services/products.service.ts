@@ -132,4 +132,10 @@ addToCart(cartDataResult: cartData) {
  removeFromCart(cartId: any) {
       return this.http.delete(`http://localhost:3000/cart/${cartId}`);
  }
+
+ currentCart(){
+    let userStore = localStorage.getItem('user');
+    let userId = userStore && JSON.parse(userStore).id;
+     return this.http.get<cartData[]>(`http://localhost:3000/cart?userId=${userId}`);
+ }
 }
