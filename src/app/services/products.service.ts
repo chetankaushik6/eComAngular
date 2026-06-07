@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
 import { cartData, ProductData } from '../data-type';
 import { EventEmitter } from '@angular/core';
+import { orderData } from '../data-type';
 @Injectable({
   providedIn: 'root'
 })
@@ -137,5 +138,9 @@ addToCart(cartDataResult: cartData) {
     let userStore = localStorage.getItem('user');
     let userId = userStore && JSON.parse(userStore).id;
      return this.http.get<cartData[]>(`http://localhost:3000/cart?userId=${userId}`);
+ }
+
+ orderNow(orderData: orderData) {
+    return this.http.post('http://localhost:3000/orders', orderData);
  }
 }
