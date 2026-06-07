@@ -11,6 +11,7 @@ import { SearchComponent } from './Components/search/search.component';
 import { ProductDetailsComponent } from './Components/product-details/product-details.component';
 import { UserAuthComponent } from './Components/user-auth/user-auth.component';
 import { CartPageComponent } from './Components/cart-page/cart-page.component';
+import { CheckoutComponent } from './Components/checkout/checkout.component';
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'seller', component: SellerComponent },
@@ -23,4 +24,5 @@ export const routes: Routes = [
      { path: 'detail/:productId', component: ProductDetailsComponent },
        { path: 'userAuth', component: UserAuthComponent },
           { path: 'cart-page', component: CartPageComponent },
+           { path: 'checkout', component: CheckoutComponent },
 ];

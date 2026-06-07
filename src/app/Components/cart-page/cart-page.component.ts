@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { cartData } from '../../data-type';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-cart-page',
   imports: [CommonModule],
@@ -12,7 +12,8 @@ import { cartData } from '../../data-type';
 export class CartPageComponent implements OnInit {
   cartData: cartData[] = [];
 
-  constructor(private productsService: ProductsService) {}
+
+  constructor(private productsService: ProductsService, private router: Router) {}
 
   ngOnInit(): void {
     this.productsService.currentCart().subscribe((cartItems) => {
@@ -44,5 +45,9 @@ export class CartPageComponent implements OnInit {
 
   removeItem(id: string | number | undefined) {
     this.cartData = this.cartData.filter((item) => item.id !== id);
+  }
+
+  checkout(){
+      this.router.navigate(['/checkout']);
   }
 }

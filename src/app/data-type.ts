@@ -41,3 +41,15 @@ export interface priceSummary{
     deliveryCharges:number;
     total:number;
 }
+
+export interface orderData{
+    userId: string | number | undefined;
+    email:string;
+    address:string;
+    contact:string;
+    paymentMethod:string;
+    subtotal:number;
+    shipping:number;
+    totalAmount:number;
+    items:cartData[];
+}

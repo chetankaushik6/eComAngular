@@ -403,5 +403,92 @@
       "id": "ddgQ4PyUWAQ"
     }
   ],
+  "orders": [
+    {
+      "userId": "a6TDko2d0Hw",
+      "email": "vjhrthfjy@gmail.com",
+      "address": "afdsasfaddf",
+      "contact": "9876543210",
+      "paymentMethod": "cash",
+      "subtotal": 400971,
+      "shipping": 100,
+      "totalAmount": 401071,
+      "items": [
+        {
+          "name": "Boat Earbuds",
+          "price": 2598,
+          "color": "Red",
+          "category": "electronics",
+          "description": "Wireless earbuds with deep bass",
+          "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
+          "quantity": 1,
+          "userId": "a6TDko2d0Hw",
+          "productId": "p2",
+          "id": "ufcoFJF1-wU"
+        },
+        {
+          "name": "Boat Earbuds",
+          "price": 2598,
+          "color": "Red",
+          "category": "electronics",
+          "description": "Wireless earbuds with deep bass",
+          "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
+          "quantity": 8,
+          "userId": "a6TDko2d0Hw",
+          "productId": "p2",
+          "id": "oGMxnp5T9ro"
+        },
+        {
+          "name": "Boat Earbuds",
+          "price": 2598,
+          "color": "Red",
+          "category": "electronics",
+          "description": "Wireless earbuds with deep bass",
+          "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
+          "quantity": 1,
+          "userId": "a6TDko2d0Hw",
+          "productId": "p2",
+          "id": "gtnjnVh78xI"
+        },
+        {
+          "name": "Samsung Galaxy S24",
+          "price": 74999,
+          "color": "Black",
+          "category": "mobile",
+          "description": "Flagship Android smartphone",
+          "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
+          "quantity": 4,
+          "userId": "a6TDko2d0Hw",
+          "productId": "p6",
+          "id": "bRR-vuTYllA"
+        },
+        {
+          "name": "Apple iPad",
+          "price": 42999,
+          "color": "Grey",
+          "category": "tablet",
+          "description": "Powerful tablet for work and play",
+          "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400",
+          "quantity": 1,
+          "userId": "a6TDko2d0Hw",
+          "productId": "p8",
+          "id": "d8qJUrOU8kw"
+        },
+        {
+          "name": "Nike Air Max",
+          "price": 7999,
+          "color": "Black",
+          "category": "shoes",
+          "description": "Comfortable running shoes",
+          "image": "https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=400",
+          "quantity": 4,
+          "userId": "a6TDko2d0Hw",
+          "productId": "p9",
+          "id": "ddgQ4PyUWAQ"
+        }
+      ],
+      "id": "-vbKQ-dchio"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
