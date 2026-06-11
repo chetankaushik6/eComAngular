@@ -327,92 +327,25 @@
       "email": "abc@gmail.com",
       "password": "123",
       "id": "a6TDko2d0Hw"
+    },
+    {
+      "name": "bablu bhai",
+      "email": "bablu@gmail.com",
+      "password": "abcd",
+      "id": "IGX5uYsNqsE"
     }
   ],
-  "cart": [
-    {
-      "name": "Boat Earbuds",
-      "price": 2598,
-      "color": "Red",
-      "category": "electronics",
-      "description": "Wireless earbuds with deep bass",
-      "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
-      "quantity": 1,
-      "userId": "a6TDko2d0Hw",
-      "productId": "p2",
-      "id": "ufcoFJF1-wU"
-    },
-    {
-      "name": "Boat Earbuds",
-      "price": 2598,
-      "color": "Red",
-      "category": "electronics",
-      "description": "Wireless earbuds with deep bass",
-      "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
-      "quantity": 8,
-      "userId": "a6TDko2d0Hw",
-      "productId": "p2",
-      "id": "oGMxnp5T9ro"
-    },
-    {
-      "name": "Boat Earbuds",
-      "price": 2598,
-      "color": "Red",
-      "category": "electronics",
-      "description": "Wireless earbuds with deep bass",
-      "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
-      "quantity": 1,
-      "userId": "a6TDko2d0Hw",
-      "productId": "p2",
-      "id": "gtnjnVh78xI"
-    },
-    {
-      "name": "Samsung Galaxy S24",
-      "price": 74999,
-      "color": "Black",
-      "category": "mobile",
-      "description": "Flagship Android smartphone",
-      "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
-      "quantity": 4,
-      "userId": "a6TDko2d0Hw",
-      "productId": "p6",
-      "id": "bRR-vuTYllA"
-    },
-    {
-      "name": "Apple iPad",
-      "price": 42999,
-      "color": "Grey",
-      "category": "tablet",
-      "description": "Powerful tablet for work and play",
-      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400",
-      "quantity": 1,
-      "userId": "a6TDko2d0Hw",
-      "productId": "p8",
-      "id": "d8qJUrOU8kw"
-    },
-    {
-      "name": "Nike Air Max",
-      "price": 7999,
-      "color": "Black",
-      "category": "shoes",
-      "description": "Comfortable running shoes",
-      "image": "https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=400",
-      "quantity": 4,
-      "userId": "a6TDko2d0Hw",
-      "productId": "p9",
-      "id": "ddgQ4PyUWAQ"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "userId": "a6TDko2d0Hw",
-      "email": "vjhrthfjy@gmail.com",
-      "address": "afdsasfaddf",
+      "email": "gtyr@gmail.com",
+      "address": "fgsauydfotas",
       "contact": "9876543210",
-      "paymentMethod": "cash",
-      "subtotal": 400971,
+      "paymentMethod": "card",
+      "subtotal": 358593,
       "shipping": 100,
-      "totalAmount": 401071,
+      "totalAmount": 358693,
       "items": [
         {
           "name": "Boat Earbuds",
@@ -424,31 +357,19 @@
           "quantity": 1,
           "userId": "a6TDko2d0Hw",
           "productId": "p2",
-          "id": "ufcoFJF1-wU"
+          "id": "seb727Pi_M4"
         },
         {
-          "name": "Boat Earbuds",
-          "price": 2598,
-          "color": "Red",
-          "category": "electronics",
-          "description": "Wireless earbuds with deep bass",
-          "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
-          "quantity": 8,
-          "userId": "a6TDko2d0Hw",
-          "productId": "p2",
-          "id": "oGMxnp5T9ro"
-        },
-        {
-          "name": "Boat Earbuds",
-          "price": 2598,
-          "color": "Red",
-          "category": "electronics",
-          "description": "Wireless earbuds with deep bass",
-          "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
+          "name": "Dell Inspiron",
+          "price": 55999,
+          "color": "Grey",
+          "category": "laptop",
+          "description": "Slim and lightweight laptop",
+          "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400",
           "quantity": 1,
           "userId": "a6TDko2d0Hw",
-          "productId": "p2",
-          "id": "gtnjnVh78xI"
+          "productId": "p10",
+          "id": "ynh3y21Noyg"
         },
         {
           "name": "Samsung Galaxy S24",
@@ -460,7 +381,32 @@
           "quantity": 4,
           "userId": "a6TDko2d0Hw",
           "productId": "p6",
-          "id": "bRR-vuTYllA"
+          "id": "4YuhF-X8B-c"
+        }
+      ],
+      "id": "yxb0Qwfbffw"
+    },
+    {
+      "userId": "a6TDko2d0Hw",
+      "email": "rtt6e@gmaill.com",
+      "address": "yt6yiritut",
+      "contact": "9999994444",
+      "paymentMethod": "cash",
+      "subtotal": 203996,
+      "shipping": 100,
+      "totalAmount": 204096,
+      "items": [
+        {
+          "name": "Samsung Galaxy S24",
+          "price": 74999,
+          "color": "Black",
+          "category": "mobile",
+          "description": "Flagship Android smartphone",
+          "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
+          "quantity": 1,
+          "userId": "a6TDko2d0Hw",
+          "productId": "p6",
+          "id": "KSY19RAPBBU"
         },
         {
           "name": "Apple iPad",
@@ -469,25 +415,50 @@
           "category": "tablet",
           "description": "Powerful tablet for work and play",
           "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400",
-          "quantity": 1,
+          "quantity": 3,
           "userId": "a6TDko2d0Hw",
           "productId": "p8",
-          "id": "d8qJUrOU8kw"
-        },
-        {
-          "name": "Nike Air Max",
-          "price": 7999,
-          "color": "Black",
-          "category": "shoes",
-          "description": "Comfortable running shoes",
-          "image": "https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=400",
-          "quantity": 4,
-          "userId": "a6TDko2d0Hw",
-          "productId": "p9",
-          "id": "ddgQ4PyUWAQ"
+          "id": "8AMxNa1qQ6k"
         }
       ],
-      "id": "-vbKQ-dchio"
+      "id": "Cr0f53EqID4"
+    },
+    {
+      "userId": "IGX5uYsNqsE",
+      "email": "bablu@gmail.com",
+      "address": "mumbai",
+      "contact": "9876543210",
+      "paymentMethod": "cash",
+      "subtotal": 20596,
+      "shipping": 100,
+      "totalAmount": 20696,
+      "items": [
+        {
+          "name": "Boat Earbuds",
+          "price": 2598,
+          "color": "Red",
+          "category": "electronics",
+          "description": "Wireless earbuds with deep bass",
+          "image": "https://images.snapmint.com/product_assets/images/000/883/889/large/open-uri20251006-17243-k2qkq5?1759738928",
+          "quantity": 1,
+          "userId": "IGX5uYsNqsE",
+          "productId": "p2",
+          "id": "X5cQeWxA4qs"
+        },
+        {
+          "name": "Sony Headphones",
+          "price": 8999,
+          "color": "Silver",
+          "category": "electronics",
+          "description": "Noise cancelling headphones",
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
+          "quantity": 2,
+          "userId": "IGX5uYsNqsE",
+          "productId": "p7",
+          "id": "DXN5Khley5o"
+        }
+      ],
+      "id": "NqSzr0eHjKk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

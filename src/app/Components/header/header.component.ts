@@ -3,7 +3,7 @@ import { RouterLink, Router, NavigationEnd } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { ProductsService } from '../../services/products.service';
-import { ProductData } from '../../data-type';
+import { ProductData, cartData } from '../../data-type';
 import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-header',
@@ -28,13 +28,17 @@ export class HeaderComponent implements OnInit {
       this.checkMenuType();
     });
 
-    let cartData =localStorage.getItem('localCart');
-    if(cartData){
-        this.cartItems= JSON.parse(cartData).length;
+    const user = localStorage.getItem('user');
+    if (!user) {
+      const cartData = localStorage.getItem('localCart');
+      if (cartData) {
+        const parsed = JSON.parse(cartData) as (ProductData | cartData)[];
+        this.cartItems = parsed.reduce((count, item) => count + ((item as any).quantity || 1), 0);
+      }
     }
 
-    this.product.cartData.subscribe((items)=>{
-        this.cartItems=items.length;
+    this.product.cartData.subscribe((items) => {
+      this.cartItems = items.reduce((count, item) => count + ((item as any).quantity || 1), 0);
     });
   }
 

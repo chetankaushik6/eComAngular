@@ -1,0 +1,130 @@
+<div class="order-container">
+  <h2>My Orders</h2>
+
+  <table class="order-table">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Order</th>
+        <th>Qty</th>
+        <th>Order ID</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <ng-container *ngFor="let order of orderData">
+        <tr *ngFor="let item of order.items; let i = index">
+          <!-- Product Image -->
+          <td>
+            <img
+              [src]="item.image"
+              [alt]="item.name"
+              class="product-img"
+            />
+          </td>
+
+          <!-- Product Name -->
+          <td>{{ item.name }}</td>
+
+          <!-- Quantity -->
+          <td>{{ item.quantity || 1 }}</td>
+
+          <ng-container *ngIf="i === 0">
+            <!-- Order ID -->
+            <td [attr.rowspan]="order.items.length">#{{ order.id }}</td>
+
+            <!-- Price -->
+            <td [attr.rowspan]="order.items.length">₹{{ getOrderTotal(order) }}</td>
+
+            <!-- Status -->
+            <td [attr.rowspan]="order.items.length">
+              <span
+                class="status"
+                [ngClass]="{
+                  'pending': order.items[0]?.status === 'Pending',
+                  'processing': order.items[0]?.status === 'Processing',
+                  'delivered': order.items[0]?.status === 'Delivered',
+                  'cancelled': order.items[0]?.status === 'Cancelled'
+                }"
+              >
+                {{ order.items[0]?.status || 'Pending' }}
+              </span>
+            </td>
+
+            <!-- Buttons -->
+            <td class="action-buttons" [attr.rowspan]="order.items.length">
+              <button class="view-btn" (click)="openOrderModal(order.id)">
+                View
+              </button>
+              <button
+                class="cancel-btn"
+                (click)="removeOrder(order.id)"
+              >
+                Cancel Order
+              </button>
+            </td>
+          </ng-container>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+
+  <div class="modal-overlay" *ngIf="selectedOrder">
+    <div class="order-modal">
+      <div class="modal-header">
+        <h3>Order #{{ selectedOrder.id }}</h3>
+        <button class="close-modal" (click)="closeOrderModal()">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-row">
+          <label>Payment:</label>
+          <span>{{ selectedOrder.paymentMethod || 'N/A' }}</span>
+        </div>
+        <div class="modal-row">
+          <label>Shipping:</label>
+          <span>₹{{ selectedOrder.shipping || 0 }}</span>
+        </div>
+        <div class="modal-row">
+          <label>Subtotal:</label>
+          <span>₹{{ selectedOrder.subtotal || getOrderTotal(selectedOrder) }}</span>
+        </div>
+        <div class="modal-row">
+          <label>Total:</label>
+          <span>₹{{ selectedOrder.totalAmount || getOrderTotal(selectedOrder) }}</span>
+        </div>
+        <div class="modal-row">
+          <label>Address:</label>
+          <span>{{ selectedOrder.address || 'N/A' }}</span>
+        </div>
+        <div class="modal-row">
+          <label>Contact:</label>
+          <span>{{ selectedOrder.contact || 'N/A' }}</span>
+        </div>
+        <div class="modal-row">
+          <label>Email:</label>
+          <span>{{ selectedOrder.email || 'N/A' }}</span>
+        </div>
+
+        <div class="modal-items">
+          <h4>Items in this order</h4>
+          <div class="modal-item" *ngFor="let item of selectedOrder.items">
+            <img [src]="item.image" [alt]="item.name" class="modal-item-img" />
+            <div>
+              <div class="modal-item-name">{{ item.name }}</div>
+              <div>Qty: {{ item.quantity || 1 }}</div>
+              <div>Price: ₹{{ (item.price || 0) * (item.quantity || 1) }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="close-modal" (click)="closeOrderModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

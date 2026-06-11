@@ -138,7 +138,11 @@ export class ProductDetailsComponent implements OnInit {
       return;
     }
 
-    const cartItemId = this.removecartData?.id ?? idToRemove;
+    const cartItemId = this.removecartData?.id;
+    if (!cartItemId) {
+      return;
+    }
+
     this.productService.removeFromCart(cartItemId).subscribe(() => {
       const user = localStorage.getItem('user');
       const userId = user && JSON.parse(user).id;

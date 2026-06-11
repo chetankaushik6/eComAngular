@@ -32,6 +32,7 @@ export interface cartData{
     quantity:undefined | number;
     userId: string | number | undefined;
     productId: string | number | undefined;
+    status?: string;
 }
 
 export interface priceSummary{
@@ -52,4 +53,5 @@ export interface orderData{
     shipping:number;
     totalAmount:number;
     items:cartData[];
+    id: string | number | undefined;
 }

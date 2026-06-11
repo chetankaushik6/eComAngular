@@ -1,14 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
 import { cartData, ProductData } from '../data-type';
-import { EventEmitter } from '@angular/core';
 import { orderData } from '../data-type';
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-   cartData =new EventEmitter<ProductData[] | []>();
+   cartData = new EventEmitter<(ProductData | cartData)[] | []>();
   constructor(private http: HttpClient) { }
 
   addProducts(data: ProductData){
@@ -111,10 +110,9 @@ localRemoveFromCart(productId: string) {
   const localCart = localStorage.getItem('localCart');
   if (localCart) {
     let cart: ProductData[] = JSON.parse(localCart) as ProductData[];
-    cart = cart.filter(item => item.id !== productId);
+    cart = cart.filter(item => String(item.id) !== String(productId));
     localStorage.setItem('localCart', JSON.stringify(cart));
     this.cartData.emit(cart);
-      
   }
 }
 addToCart(cartDataResult: cartData) {
@@ -122,12 +120,11 @@ addToCart(cartDataResult: cartData) {
  }
 
  getCartList(userId: string) {
-     return this.http.get<ProductData[]>(`http://localhost:3000/cart?userId=${userId}`,{observe:'response'}).subscribe((res)=>{
-         if(res && res.body){
+     return this.http.get<cartData[]>(`http://localhost:3000/cart?userId=${userId}`, { observe: 'response' }).subscribe((res) => {
+         if (res && res.body) {
               this.cartData.emit(res.body);
          }
-     })
-    
+     });
  }
 
  removeFromCart(cartId: any) {
@@ -142,5 +139,21 @@ addToCart(cartDataResult: cartData) {
 
  orderNow(orderData: orderData) {
     return this.http.post('http://localhost:3000/orders', orderData);
+ }
+
+ orderList() {
+    let userStore = localStorage.getItem('user');
+    let userId = userStore && JSON.parse(userStore).id;
+     return this.http.get<orderData[]>(`http://localhost:3000/orders?userId=${userId}`);
+ }
+
+ deleteCartItems(cartId: number) {
+    return this.http.delete(`http://localhost:3000/cart/${cartId}`,{observe:'response'}).subscribe((result)=>{
+         this.cartData.emit([]);
+    })
+ }
+
+ deleteOrder(orderId: number|string |undefined) {
+    return this.http.delete(`http://localhost:3000/orders/${orderId}`);
  }
 }
