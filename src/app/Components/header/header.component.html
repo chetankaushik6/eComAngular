@@ -15,7 +15,7 @@
       </li>
     </ul>
   </div> -->
-<div class="search-container" *ngIf="menuType==='default'">
+<div class="search-container" *ngIf="menuType!=='seller'">
   
   <input
     type="text"
@@ -51,7 +51,7 @@
         <li><a routerLink="/userAuth">{{userName | titlecase}}</a></li>
          <li><a routerLink="/my-orders">My Orders</a></li>
       <li><a href="#" class="mnu" (click)="userLogout(); $event.preventDefault()">LogOut</a></li>
-      <li><a routerLink="/cart-page">Cart({{cartItems}})</a></li>
+      <li><a [routerLink]="cartItems>0 ? '/cart-page' : null">Cart({{cartItems}})</a></li>
     </ul>
 
     <ul *ngSwitchCase="'seller'">
