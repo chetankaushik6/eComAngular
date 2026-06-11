@@ -16,10 +16,19 @@ export class CartPageComponent implements OnInit {
   constructor(private productsService: ProductsService, private router: Router) {}
 
   ngOnInit(): void {
-    this.productsService.currentCart().subscribe((cartItems) => {
-      this.cartData = cartItems || [];
-      console.warn('Cart Items plz:', cartItems);
-    });
+    const user = localStorage.getItem('user');
+    const userId = user ? JSON.parse(user).id : null;
+
+    if (userId) {
+      this.productsService.cartData.subscribe((cartItems) => {
+        this.cartData = cartItems as cartData[] || [];
+      });
+      this.productsService.getCartList(userId);
+      return;
+    }
+
+    const localCart = localStorage.getItem('localCart');
+    this.cartData = localCart ? (JSON.parse(localCart) as cartData[]) : [];
   }
 
   get subtotal(): number {
@@ -44,7 +53,22 @@ export class CartPageComponent implements OnInit {
   }
 
   removeItem(id: string | number | undefined) {
-    this.cartData = this.cartData.filter((item) => item.id !== id);
+    if (!id) {
+      return;
+    }
+
+    const user = localStorage.getItem('user');
+    const userId = user ? JSON.parse(user).id : null;
+
+    if (userId) {
+      this.productsService.removeFromCart(id).subscribe(() => {
+        this.productsService.getCartList(userId);
+      });
+      return;
+    }
+
+    this.productsService.localRemoveFromCart(String(id));
+    this.cartData = this.cartData.filter((item) => String(item.id) !== String(id));
   }
 
   checkout(){

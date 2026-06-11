@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ProductsService } from '../../services/products.service';
 import { cartData, orderData } from '../../data-type';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-checkout',
   imports: [CommonModule, FormsModule],
@@ -13,6 +13,7 @@ import { cartData, orderData } from '../../data-type';
 export class CheckoutComponent implements OnInit {
   cartData: cartData[] = [];
   shipping = 100;
+  orderMsg: string = '';
   paymentMethod = 'cash';
   paymentMethods = [
     { value: 'cash', label: 'Cash on Delivery' },
@@ -20,7 +21,7 @@ export class CheckoutComponent implements OnInit {
     { value: 'upi', label: 'UPI' }
   ];
 
-  constructor(private productsService: ProductsService) {}
+  constructor(private productsService: ProductsService, private router: Router) { }
 
   ngOnInit(): void {
     this.productsService.currentCart().subscribe(
@@ -52,20 +53,37 @@ export class CheckoutComponent implements OnInit {
   onSubmit(value: any) {
     let user = localStorage.getItem('user');
     let userId = user ? JSON.parse(user).id : null;
-    const order:orderData = {
+    const order: orderData = {
       userId: userId,
       ...value,
       paymentMethod: this.paymentMethod,
       subtotal: this.subtotal,
       shipping: this.shipping,
       totalAmount: this.totalAmount,
-      items: this.cartData
+      items: this.cartData,
+      id: undefined
     };
+
+    this.cartData.forEach(item => {
+      if (item.id) {
+        setTimeout(() => {
+          this.productsService.deleteCartItems(item.id as number);
+          // this.productsService.deleteCartItems(this.cartData[0].id as number);
+        }, 600);
+      }
+    });
+
     this.productsService.orderNow(order).subscribe(() => {
       alert('Order placed successfully!');
       this.cartData = [];
-      localStorage.removeItem('localCart');
+      this.orderMsg = 'Your order has been placed successfully!';
+      setTimeout(() => {
+        this.orderMsg = '';
+           localStorage.removeItem('localCart');
+      this.router.navigate(['/my-orders']);
+      },3000);
     });
+
     console.log('Order submitted:', order);
     alert(`Order confirmed! Total amount: ₹${this.totalAmount}, Payment: ${this.paymentMethod}`);
   }
